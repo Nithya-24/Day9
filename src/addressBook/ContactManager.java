@@ -3,10 +3,10 @@ package addressBook;
 import java.util.*;
 
 public class ContactManager {
-	  private final List<Contact> contactList = new ArrayList<>();
+	  private final static List<Contact> contactList = new ArrayList<>();
 
 
-	    public void addNewContact() {
+	    public static void addNewContact() {
 	        Contact contact = new Contact();
 
 	        contact.setFirstName(ScannerUtil.getString("Enter First name: "));

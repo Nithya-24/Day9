@@ -18,16 +18,39 @@ public class Main {
 		*/
 		
 		
-		public int menu() {
+		@SuppressWarnings("resource")
+		public void Menu() {
 			Scanner sc = new Scanner(System.in);
+			System.out.println("1. Add ");
+			System.out.println("2. Edit ");
+			System.out.println("3. Delete ");
+			System.out.println("Enter the Choice ");
+			int ch = sc.nextInt();
 			
-			System.out.println(" Enter the contact to Add ");
-			return sc.nextInt();
-	}
+			ContactManager contactManager = new ContactManager();
+			
+			switch(ch) {
+			
+			case 1: System.out.println("1. Enter the Details to Add The contact ");
+					
+					contactManager.addNewContact();
+		            System.out.println("Contact added to address book successfully.\n");
+		            break;
+			case 2: System.out.println("2.Edit the Contact  ");
+					// return sc.nextInt();
+					break;
+			case 3: System.out.println("3.Delete the contact ");
+					// return sc.nextInt();
+					break;
+			default: System.out.println("Invalid");
+					 break;
+			}
+}
+		/*
 		 public void userSelection() {
 			 ContactManager contactManager = new ContactManager();
 		        do {
-		            int choice = menu();
+		            int choice = Menu();
 		            if (choice == 1) {
 		                contactManager.addNewContact();
 		                System.out.println("Contact added to address book successfully.\n");
@@ -36,7 +59,15 @@ public class Main {
 		            }
 		        }while(true);
 
+		 } */
+		 public static void main(String[] args) {
+			 
+		 
+		 Main menu = new Main();
+	        menu.Menu();
 		 }
+		
+	    	 
 	}
 
 
