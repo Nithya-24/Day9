@@ -34,32 +34,24 @@ public class Main {
 			case 1: System.out.println("1. Enter the Details to Add The contact ");
 					
 					contactManager.addNewContact();
-		            System.out.println("Contact added to address book successfully.\n");
+		            System.out.println("Contact added to address book successfully");
 		            break;
-			case 2: System.out.println("2.Edit the Contact  ");
-					// return sc.nextInt();
+			case 2: System.out.println("2.Enter the Details to Edit  ");
+					contactManager.editByName(ScannerUtil.getString("Enter contact First name to edit: "));
 					break;
 			case 3: System.out.println("3.Delete the contact ");
+					contactManager.deleteContact(ScannerUtil.getString("Enter contact First name to delete: "));
 					// return sc.nextInt();
 					break;
 			default: System.out.println("Invalid");
 					 break;
 			}
 }
-		/*
-		 public void userSelection() {
-			 ContactManager contactManager = new ContactManager();
-		        do {
-		            int choice = Menu();
-		            if (choice == 1) {
-		                contactManager.addNewContact();
-		                System.out.println("Contact added to address book successfully.\n");
-		            } else {
-		                break;
-		            }
-		        }while(true);
+		
+		
 
-		 } */
+
+		 
 		 public static void main(String[] args) {
 			 
 		 
@@ -69,5 +61,3 @@ public class Main {
 		
 	    	 
 	}
-
-
