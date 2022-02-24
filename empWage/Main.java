@@ -4,9 +4,9 @@ public class Main {
 
 	 public static void main(String[] args) {
 	        System.out.println("Welcome to Employee Wage Computation Program! ");
-	        ForCompany company1 = new ForCompany("ABC",50,22,150);
+	        ForCompany company1 = new ForCompany("ABC",12,13,200);
 	        company1.calculateMonthlyWage();
-	        ForCompany company2 = new ForCompany("Company B",40,26,230);
+	        ForCompany company2 = new ForCompany("XYZ",10,11,200);
 	        company2.calculateMonthlyWage();
 	    }
 	}
